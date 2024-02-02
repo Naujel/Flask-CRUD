@@ -2,6 +2,12 @@
 
 La aplicacion consiste en una agenda de contactos simple que realiza operaciones CRUD con los usuarios a través de una base de datos MySQL mediante el framework de lenguaje Python Flask.
 
+## Clone el repositorio
+
+```txt
+https://github.com/Naujel/Flask-CRUD.git
+```
+
 ## Crear entorno virtual
 
 ```txt
