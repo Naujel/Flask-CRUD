@@ -16,4 +16,4 @@ python install -r requirements.txt
 ___
 ## Diseñe su base de datos
 
-Utilice la base de datos de referencia del archivo /src/database/flask_db.sql
+Utilice la base de datos de referencia del archivo /src/database/flask_db.sql y cree sus variables de entorno del archivo .env
