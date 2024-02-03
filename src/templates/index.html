@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact App</title>
+    <title>Contactos</title>
     <link rel="stylesheet" href="/static/style.css">    
 </head>
 <body>
     <Header class="header">
-        <h1 class="titulo">Contact App</h1>
+        <h1 class="titulo">Agenda de contactos</h1>
     </Header>
     <main class="main">
         <form action="/users/add" method="POST" class="form">
@@ -22,27 +22,30 @@
             </div>
             <button type="submit" class="button">Enviar</button>
         </form>
-        <table>
-            <thead>
-                <tr>
-                    <th>Nombre</th>
-                    <th>Email</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for user in users %}
-                <tr>
-                    <td>{{ user.1 }}</td>
-                    <td>{{ user.2 }}</td>
-                    <td>
-                        <a href="/users/edit/{{user.0}}">Editar</a>
-                        <a href="/users/delete/{{user.0}}">Eliminar</a>
-                    </td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Email</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in users %}
+                    <tr>
+                        <td>{{ user.1 }}</td>
+                        <td>{{ user.2 }}</td>
+                        <td>
+                            <a href="/users/edit/{{user.0}}">Editar</a>
+                            <a href="/users/delete/{{user.0}}">Eliminar</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        
     </main>
 </body>
 </html>
